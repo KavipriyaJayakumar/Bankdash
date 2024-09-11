@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar__bankdash">
+            <img src="Images/iconfinder_vector_65_09_473792 1.png" alt="BankDash Logo">
+            <p class="sidebar__title">BankDash.</p>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/home 2.svg" alt="Dashboard Icon"><span class="sidebar__text">Dashboard</span></a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/transfer 1.svg" alt="Transactions Icon"><span class="sidebar__text">Transactions</span></a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/user 3 1.svg" alt="Account Icon"><span class="sidebar__text">Account</span></a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/economic-investment 1.svg" alt="Investments Icon"><span class="sidebar__text">Investments</span></a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/credit-card 1.svg" alt="Credit Cards Icon"><span class="sidebar__text">Credit Cards</span></a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/loan 1.svg" alt="Loans Icon"><span class="sidebar__text">Loans</span></a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/service 1.svg" alt="Services Icon"><span class="sidebar__text">Services</span></a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/econometrics 1.svg" alt="My Privileges Icon"><span class="sidebar__text">My Privileges</span></a></li>
+                <li class="sidebar__item"><a href="" class="sidebar__link"><img src="Images/settings solid 1.svg" alt="Settings Icon"><span class="sidebar__text">Setting</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <header class="header">
+        <h1 class="header__title">Accounts</h1>
+        <img class="header__profile" src="Images/pexels-christina-morillo-1181690 1.jpg" alt="Profile Picture">
+        <div class="header__right">
+            <input class="header__search-input" type="text" placeholder="Search for something">
+            <img class="header__settings" src="Images/settings 1.svg" alt="Settings Icon">
+            <div class="header__notification"></div>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="account-details">
+            <div class="account-details__overview">
+                <div class="account-details__overview-images"><img src="Images/money-tag 1.svg" alt="My Balance Icon"></div>
+                <div class="account-details__overview-title">My Balance</div>
+                <div class="account-details__overview-value">$12,750</div>
+            </div>
+            <div class="account-details__overview">
+                <div class="account-details__overview-images full-image"><img src="Images/Group 400.jpg" alt="Income Icon"></div>
+                <div class="account-details__overview-title">Income</div>
+                <div class="account-details__overview-value">$5,600</div>
+            </div>
+            <div class="account-details__overview">
+                <div class="account-details__overview-images red-bg"><img src="Images/001-medical.svg" alt="Expense Icon"></div>
+                <div class="account-details__overview-title">Expense</div>
+                <div class="account-details__overview-value">$3,460</div>
+            </div>
+            <div class="account-details__overview">
+                <div class="account-details__overview-images green-bg" ><img src="Images/003-saving.svg" alt="Total Saving Icon"></div>
+                <div class="account-details__overview-title">Total Saving</div>
+                <div class="account-details__overview-value">$7,920</div>
+            </div>
+        </div>
+        <div class="transaction-card">
+        <div class="transaction">
+            <h3 class="transaction__title">Last Transaction</h3>
+            <div class="transaction__list">
+                <div class="transaction__item">
+                    <span class="transaction__icon"><img src="Images/renew 1.svg" alt="Spotify Subscription Icon"></span>
+                    <span class="transaction__name">Spotify Subscription
+                        <p class="transaction__date">25 Jan 2021</p></span>
+                    <span class="transaction__category">Shopping</span>
+                    <span class="transaction__number">1234****</span>
+                    <span class="transaction__status">Pending</span>
+                    <span class="transaction__amount">-$150</span>
+                </div>
+                <div class="transaction__item">
+                    <span class="transaction__icon blue-bg"><img src="Images/settings 2 1.svg" alt="Mobile Service Icon"></span>
+                     <span class="transaction__name">Mobile Service
+                        <p class="transaction__date">25 Jan 2021</p></span>
+                    <span class="transaction__category">Service</span>
+                    <span class="transaction__number">1234****</span>
+                    <span class="transaction__status">Completed</span>
+                    <span class="transaction__amount">-$340</span>
+                </div>
+                <div class="transaction__item">
+                    <span class="transaction__icon red-bg"><img src="Images/user2 1.svg" alt="Emilly Wilson Icon"></span>
+                     <span class="transaction__name">Emilly Wilson
+                        <p class="transaction__date">25 Jan 2021</p></span>
+                    <span class="transaction__category">Transfer</span>
+                    <span class="transaction__number">1234****</span>
+                    <span class="transaction__status">Completed</span>
+                    <span class="transaction__amount green-text">+$780</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 class="card__title">My Card</h3>
+            <div class="card__details">
+                <div class="card__chip">
+                    <span class="card__chip-label">Balance</span><br>
+                    <span class="card__chip-value">$5,756</span>
+                </div>
+                <div class="card__logo"><img src="Images/Chip_Card.png" alt="Card Chip"></div>
+                <div class="card__info">
+                    <div class="card__holder">
+                        <span class="card__info-label light-white">CARD HOLDER</span><br>
+                        <span class="card__info-value small-size">Eddy Cusuma</span>
+                    </div>
+                    <div class="card__validity">
+                        <span class="card__info-label light-white">VALID THRU</span><br>
+                        <span class="card__info-value small-size">12/22</span>
+                    </div>
+                </div>
+                <div class="card__bottom">
+                    <div class="card__number large-size">3778 **** **** 1234</div>
+                    <img src="Images/Group 17.svg" alt="Card Design">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="debit-invoice">
+        <div class="debit-credit">
+            <h3 class="debit-credit__title">Debit & Credit Overview</h3>
+            <div class="debit-credit__overview">
+                <p class="debit-credit__description">Credit Card generally means a plastic card issued by Scheduled Commercial Banks.</p>
+                <form class="debit-credit__form">
+                    <div class="debit-credit__form-column">
+                        <label for="card-type" class="debit-credit__label">Card Type</label>
+                        <input type="text" id="card-type" name="card-type" class="debit-credit__input" placeholder="Classic">
+                        
+                        <label for="card-number" class="debit-credit__label">Card Number</label>
+                        <input type="text" id="card-number" name="card-number" class="debit-credit__input" placeholder="**** **** **** ****">
+                    </div>
+                    <div class="debit-credit__form-column">
+                        <label for="name-on-card" class="debit-credit__label">Name on Card</label>
+                        <input type="text" id="name-on-card" name="name-on-card" class="debit-credit__input" placeholder="My Cards">
+                        
+                        <label for="expiration-date" class="debit-credit__label">Expiration Date</label>
+                        <input type="text" id="expiration-date" name="expiration-date" class="debit-credit__input" placeholder="25 January 2025">
+                    </div>
+                    <button type="submit" class="debit-credit__button">Add Card</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="invoice">
+            <h3 class="invoice__title">Invoices sent</h3>
+            <div class="invoice__list">
+                <div class="invoice__item">
+                    <div class="invoice__icon apple-store"></div>
+                    <div class="invoice__details">
+                        <div class="invoice__name">Apple Store</div>
+                        <div class="invoice__time">5h ago</div>
+                    </div>
+                    <div class="invoice__amount">$450</div>
+                </div>
+                <div class="invoice__item">
+                    <div class="invoice__icon michael"></div>
+                    <div class="invoice__details">
+                        <div class="invoice__name">Michael</div>
+                        <div class="invoice__time">2 days ago</div>
+                    </div>
+                    <div class="invoice__amount">$160</div>
+                </div>
+                <div class="invoice__item">
+                    <div class="invoice__icon playstation"></div>
+                    <div class="invoice__details">
+                        <div class="invoice__name">Playstation</div>
+                        <div class="invoice__time">5 days ago</div>
+                    </div>
+                    <div class="invoice__amount">$1085</div>
+                </div>
+                <div class="invoice__item">
+                    <div class="invoice__icon william"></div>
+                    <div class="invoice__details">
+                        <div class="invoice__name">William</div>
+                        <div class="invoice__time">10 days ago</div>
+                    </div>
+                    <div class="invoice__amount">$90</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
