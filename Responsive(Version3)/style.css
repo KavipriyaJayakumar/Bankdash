@@ -1,0 +1,870 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+@font-face {
+   font-family: 'bankdash';
+   src:  url('font-icons/bankdash.eot?yuas57');
+   src:  url('font-icons/bankdash.eot?yuas57#iefix') format('embedded-opentype'),
+     url('font-icons/bankdash.woff2?yuas57') format('woff2'),
+     url('font-icons/bankdash.ttf?yuas57') format('truetype'),
+     url('font-icons/bankdash.woff?yuas57') format('woff'),
+     url('font-icons/bankdash.svg?yuas57#bankdash') format('svg');
+   font-weight: normal;
+   font-style: normal;
+   font-display: block;
+ }
+ 
+ [class^="icon-"],[class*=" icon-"] {
+   font-family: 'bankdash' !important;
+   font-style: normal;
+   font-weight: normal;
+   font-variant: normal;
+   text-transform: none;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+
+ .icon-dashboard:before {
+   content: "\e906";
+ }
+ .icon-transaction::before{
+   content: "\e912";
+ }
+ .icon-user::before {
+   content: "\e913";
+ }
+ .icon-investment::before {
+   content: "\e907";
+ }
+ .icon-credit::before {
+   content: "\e903";
+ }
+ .icon-loan::before {
+   content: "\e908";
+ }
+ .icon-econometrics::before {
+   content: "\e904";
+ }
+ .icon-service::before {
+   content: "\e90e";
+ }
+ 
+@font-face {
+   font-family:"Mont";
+   src: url('fonts/Mont-HeavyDEMO.otf');
+}
+@font-face {
+   font-family: "Inter";
+   src: url('fonts/Inter-SemiBold.otf');
+   font-weight: 600;
+}
+@font-face {
+   font-family: "Inter";
+   src: url('fonts/Inter-Regular.otf');
+   font-weight: 400;
+}
+@font-face {
+   font-family: "Inter";
+   src: url('fonts/Inter-Medium.otf');
+   font-weight: 500;
+}
+@font-face {
+   font-family: "Lato";
+   src: url('fonts/Lato-Regular.ttf');
+   font-weight: 400;
+}
+@font-face {
+   font-family: "Lato";
+   src: url('fonts/Lato-Semibold.ttf');
+   font-weight: 600;
+}
+body{
+   display: grid;
+   grid-template-rows: 140px 1fr;
+   grid-template-columns: 1fr;
+   grid-template-areas:
+       "header"
+       "content";
+}
+.sidebar{
+   grid-area: sidebar;
+   display: none;
+   
+}
+.sidebar__list{
+   list-style-type: none;
+}
+.sidebar__link:hover{
+   background-color:whitesmoke;
+   color:blue;
+}
+.sidebar__text{
+   font-family: Inter;
+   font-size: 16px;
+   font-weight: 500;
+   margin-left: 26px;
+   vertical-align: middle;
+}
+.sidebar__icons{
+ font-size: 20px;
+ vertical-align: middle;
+}
+.sidebar__bankdash img{
+   float:left;
+   margin-right:2px;
+}
+.sidebar__link{
+   display: block;
+    padding: 21px 38px 21px 30px;
+  text-decoration:none;
+  color: #B1B1B1;
+
+}
+.sidebar__title{
+   color: #343C6A;
+font-family: Mont;
+font-weight: 900;
+padding-top: 4px;
+}
+.icon-settings-m::before {
+   content: "\e910";
+ }
+.header{  
+      background: white;
+      padding: 20px 33px;
+      grid-area: header;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap:15px;
+}
+.header__title{
+    color: #343C6A;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 600;
+ }
+ .header__search-input{
+    padding:13px 30px 13px 60px;
+    border-style: none;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 40px;
+    background: #F5F7FA;
+   background-image: url('Images/magnifying-glass\ 1.svg');
+   background-repeat: no-repeat;
+   background-position: 25px; 
+   outline: none;
+   order: 1;
+  flex:1 1 100%;
+ }
+ .header__settings {
+   display: none;
+   padding: 12px;
+  background-color:#F5F7FA;
+  border-radius:50%;
+}
+.header__notification{
+   display: none;
+   width:50px;
+   height:50px;
+    padding: 12px; 
+   background-color:#F5F7FA;
+   border-radius:50%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-image: url('Images/002-notification-1.svg');
+}
+.header__profile{
+  width:50px;
+   height:50px;
+   border-radius: 50%;
+}
+.content{  
+    background: #E6EFF5;
+    padding: 25px;
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    gap:23px;
+    overflow-y: auto;
+    height: calc(100vh - 85px);
+}
+.content > div{
+   width:fit-content;
+   margin:0 auto;
+}
+.account-details{
+   display: flex;
+   flex-wrap: wrap;
+   gap:15px;
+}
+.account-details__overview{
+   width:155px;
+   border-radius: 25px;
+   background: #FFF;
+   padding: 15px;
+   display: flex;
+   gap:10px;
+}
+.account-details__overview-images {
+    border-radius:50%;
+    padding:12px;
+    width:45px;
+    height:45px;
+    align-self: center;
+}
+.full-image{
+    padding:0px;   
+}
+.accounts-images{
+   width:20px;
+   height:20px;
+}
+.accounts-image{
+   width:45px;
+   height:45px;
+}
+
+.account-details__overview-info{
+   align-self: center;
+}
+.account-details__overview-title{
+     color: #718EBF;
+font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+padding-bottom: 4px;
+}
+.account-details__overview-value{
+   color: #232323;
+font-family: Inter;
+font-weight: 600;
+}
+.transaction-card{
+   display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.transaction,.card,.invoice,.debit-credit{
+   display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+.transaction__title,.card__title,.debit-credit__title,.invoice__title{
+   color: #333B69;
+font-family: Inter;
+font-size: 16px;
+font-weight: 600;
+
+}
+ .transaction__list{
+   border-radius: 25px;
+   background: #FFF;
+   display:table;
+   border-spacing: 12px;
+    width: 325px;
+    padding: 8px;
+  
+ }
+ .transaction__item{
+   display:table-row;
+ }
+ .transaction__details,.transaction__category,.transaction__number,
+ .transaction__status,.transaction__amount{
+   display:table-cell;
+   vertical-align: middle;
+   color: #718EBF;
+font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+ }
+ .transaction__number,.transaction__category,.transaction__status{
+   display: none;
+ }
+ .transaction__icon{
+      width: 45px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      border-radius: 20px;
+  }
+
+.icon-spotify::before{
+   content:  "\e90d";
+  }
+
+ .icon-mobile::before{
+   content:  "\e911";
+   
+ }
+ .icon-user1::before{
+   content:  "\e914";
+   
+ }
+ .transaction__name{
+   color: #333B69;
+   font-size: 14px;
+   font-weight: 500;
+   padding-bottom: 4px;
+ }
+.transaction__amount{
+   color: #FE5C73;
+   font-weight: 500;
+}
+
+.green-text{
+   color: #16DBAA;
+   margin-left: 23px;
+
+}
+.blue-bg{
+   background-color:#E7EDFF;
+   color:#396AFF;
+}
+.pink-bg{
+background: #FFE0EB;
+color:#FF82AC;
+}
+.green-bg{
+    background-color: #DCFAF8;
+    color:#16DBCC;
+}
+.yellow-bg{
+   background-color: #FFF5D9;
+   color: #FFBB38;
+}
+
+.card__details{
+   border-radius: 25px;
+   width:325px;
+   height:197px;
+background: linear-gradient(107deg, #2D60FF 2.61%, #539BFF 101.2%);
+}
+.card__title-end{
+   float: right;
+   color: #343C6A;
+ font-family: Inter;
+ font-size: 14px;
+ font-weight: 600;
+ margin-top: 3px;
+}
+.card__top{
+   padding: 21px;
+}
+.card__chip{
+   display: inline-block;
+}
+.card__chip-label,.card__info-label{
+    color:#FFF;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+}
+.card__chip-value,.card__info-value,.card__number{
+    color: #FFF;
+font-family: Lato;
+font-size: 20px;
+font-weight: 600;
+}
+.small-size{
+    font-size: 15px;
+}
+.large-size{
+    font-size: 17px;
+    display: inline-block;
+}
+.light-white{
+ color: rgba(255, 255, 255, 0.70);
+}
+.card__logo{
+   float: right;
+}
+.card__info{
+   margin-top:29px;
+   height:38px;
+   
+}
+.card__holder{
+   width:50%;
+  float:left;
+}
+.card__validity{
+   width:50%;
+   float: right;
+}
+.card-text{
+   color: rgba(255, 255, 255, 0.70);
+font-family: Lato;
+font-size: 12px;
+font-weight: 400;
+}
+.card__bottom{
+   padding: 10px 20px;
+   border-radius: 0px 0px 25px 25px;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+.card__bottom-img{
+   float: right;
+   margin-right: 15px;
+      width:24px;
+      height:24px;
+      background-color:rgba(255, 255, 255, 0.50);
+      border-radius:50%;
+      position:relative;
+}
+    .card__bottom-img::before{
+      content:'';
+       width:24px;
+      height:24px;
+      background-color:rgba(255, 255, 255, 0.50);
+      position:absolute;
+      top:0;
+      left:50%;
+       border-radius:50%;
+    }
+
+.debit-invoice{
+   display: flex;
+   gap:30px;
+   flex-wrap: wrap;
+}
+
+.debit-credit__overview{
+   width:325px;
+   border-radius: 25px;
+   background: #FFF;
+   padding: 20px;
+
+}
+.debit-credit__description{
+   color: #718EBF;
+font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+line-height: 22px; 
+}
+.debit-credit__form{
+   margin-top: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px 30px;
+}
+.debit-credit__label{
+   font-family: Inter;
+   font-weight: 400;
+   display:block;
+   margin-bottom:11px;
+   font-size: 13px;
+}
+.debit-credit__input{
+   width: 285px;
+   height:40px;
+   height: 40px;
+   border-radius: 15px;
+   padding: 16px 20px;
+border: 1px solid #DFEAF2;
+color: #718EBF;
+font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+outline:none;
+
+}
+.debit-credit__button{
+   width:285px;
+   padding:14px 39px;
+   border-radius: 9px;
+background: #1814F3;
+color: #FFF;
+font-family: Inter;
+font-size: 15px;
+font-weight: 500;
+border: none;
+}
+
+.invoice__list{
+   width:325px;
+   background: #FFF;
+   border-radius: 25px;
+   padding:7px 5px;
+   display: table;
+   border-spacing:20px 21px;
+}
+.invoice__item{
+   display:table-row;
+   
+}
+.invoice__icon{
+   display:table-cell;
+   width: 45px;
+   height: 45px;
+   padding: 13px;
+   font-size: 20px;
+   border-radius:12px;
+}
+.icon-apple::before{
+   content:"\e900";
+}
+
+.icon-playstation::before{
+   content:"\e90c"
+}
+
+.invoice__details{
+   display: table-cell;
+   vertical-align: middle;
+}
+
+.invoice__name{
+   margin-bottom: 4px;
+   color: #333B69;
+font-family: Inter;
+font-size: 14px;
+font-weight: 500;
+}
+.invoice__time,.invoice__amount{
+   color: #718EBF;
+font-family: Inter;
+font-size: 13px;
+font-weight: 400;
+}
+.invoice__amount{
+   display: table-cell;
+   vertical-align: middle;
+   text-align: right;
+}
+
+
+@media screen and (min-width:1024px){
+   body{
+      display: grid;
+      grid-template-rows: 85px 1fr;
+      grid-template-columns: 230px 1fr;
+      grid-template-areas:
+          "sidebar header"
+          "sidebar content";
+   }
+   .nav-img{
+      display: none;
+   }
+   .header{
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      gap:10px;
+      padding: 25px 33px;
+   }
+   .header__title{
+      font-size: 28px;
+      margin-right: auto;
+   }
+   .header__settings {
+      display: block;
+   }
+   .header__notification{
+      display: block;
+   }
+   .header__search-input{
+      display: block;
+      order:0;
+     flex:0;
+     padding:16px 43px 16px 60px;
+    }
+    .sidebar{
+      display:block;
+      width:230px;
+    }
+    .sidebar__nav{
+      height:calc(100vh - 85px);
+      overflow: auto;
+    }
+    .sidebar__bankdash{
+      padding: 28px 17px 21px 30px;
+    }
+    
+    .account-details{
+      gap:25px;
+    }
+    .account-details__overview{
+      padding: 15px;
+      width: 167px;
+      gap:12px;
+    }
+    .account-details__overview-images {
+      padding:15px;
+      width:50px;
+      height:50px;
+  }
+  .accounts-image{
+   width:50px;
+   height:50px;
+}
+.full-image{
+   padding: 0;
+}
+.transaction__list{
+   width:487px;
+}
+.card__details{
+   width: 231px;
+   height: 170px;
+}
+.card__top{
+   padding:16px 20px;
+}
+.card__chip-value{
+   font-size: 16px;
+}
+.transaction-card{
+gap: 25px;
+}
+   .transaction__number,.transaction__category,.transaction__status{
+      display: table-cell;
+    }
+    .transaction__icon{
+      width: 40px;
+      height: 40px;
+      }
+    .transaction__name{
+      font-size: 12px;
+    }
+ .card__info{
+   margin-top: 15px;
+ }
+ .card__info-label{
+   font-size: 10px;
+ }
+ .card__info-value{
+   font-size: 13px;
+ }
+ .large-size{
+   font-size: 15px;
+ }
+ .card__bottom-img{
+   width:20px;
+   height:20px;
+  }
+  .card__bottom-img::before{
+   width:20px;
+   height:20px;
+  }
+ .debit-credit__overview{
+   width: 487px;
+   height: 270px;
+ }
+ 
+ .debit-credit__form
+ {
+   margin-top:5px;
+   gap:8px 40px;
+ }
+ .debit-credit__label{
+   font-size: 12px;
+ }
+ .debit-credit__input{
+   font-size: 11px;
+   width: 200px;
+    padding: 15px;
+ }
+ .debit-credit__button{
+  font-size: 14px;
+  width: 160px;
+ }
+ .invoice__list{
+   width: 227px;
+   height: 270px;
+   padding:3px 8px;
+   border-spacing: 12px 17px;
+ }
+ .invoice__icon{
+   border-radius: 15px;
+ }
+ .invoice__name{
+  font-size: 13px;
+}
+}
+
+
+
+
+@media screen and (min-width:1440px)
+{
+   body{
+      grid-template-rows: 100px 1fr;
+      grid-template-columns: 250px 1fr;
+   }
+   .sidebar{
+      width:250px;
+   }
+    .sidebar__bankdash{
+      height: 100px;
+      padding: 35px 22px 29px 44px;
+   }
+   .sidebar__title{
+      font-size: 25px;
+   }
+   .sidebar__nav{
+      height:calc(100vh - 100px);
+      width:250px;
+   }
+   .sidebar__link{
+       padding: 21px 38px 21px 43px;
+   }
+   .sidebar__text{
+      font-size: 18px;
+   }
+   .sidebar__icons{
+      font-size: 25px;
+   }
+   .header{
+      gap:30px;
+   }
+   .account-details{
+      gap:30px;
+    }
+    .account-details__overview{
+      padding:25px 35px;
+      width: 255px;
+      gap:15px;
+    }
+    .account-details__overview-images {
+      padding:20px;
+      width:70px;
+      height:70px;
+  }
+  .accounts-images{
+   width:30px;
+   height:30px;
+}
+.accounts-image{
+   width:70px;
+   height:70px;
+}
+.full-image{
+   padding: 0;
+}
+.account-details__overview-title{
+   font-size: 16px;
+   padding-bottom: 7px;
+}
+.account-details__overview-value{
+   font-size: 22px;
+ }
+ .transaction__title,.card__title,.debit-credit__title,.invoice__title{
+   font-size: 22px;
+ }
+ .card__title-end{
+   font-size: 17px;
+ }
+ .transaction__list{
+   width: 730px;
+   padding: 15px 0px;
+   border-spacing: 25px 10px;
+ }
+   .transaction__icon{
+      width: 55px;
+      height: 55px;
+     font-size: 27px;
+      }
+   .transaction__name{
+      font-size: 16px;
+      padding-bottom: 7px;
+    }
+    .transaction__details,.transaction__category,.transaction__number,
+ .transaction__status{
+   font-size: 15px;
+ }
+ .transaction__amount{
+   font-size: 16px;
+ }
+
+ .card__details{
+   width:350px;
+ height:235px;
+  }
+  .card__top{
+   padding: 24px 24px 39px 26px;
+  }
+  .card__chip-value{
+   font-size: 16px;
+}
+.card__info{
+   margin-top: 29px;
+ }
+ .card__info-label{
+   font-size: 12px;
+ }
+ .card__info-value{
+   font-size: 15px;
+ }
+  .large-size{
+   font-size: 22px;
+  }
+  .card__bottom{
+   padding:20px 26px;
+  }
+  .card__bottom-img{
+   width:30px;
+   height:30px;
+  }
+  .card__bottom-img::before{
+   width:30px;
+   height:30px;
+  }
+  .debit-credit__overview{
+   width:730px;
+   height: 364px;
+   padding: 27px 30px;
+  }
+  .debit-credit__form{
+   margin-top: 32px;
+   gap: 20px 30px;
+  }
+  .debit-credit__description{
+   font-size: 16px;
+   line-height: 28px;
+ } 
+ .debit-credit__label{
+   font-size: 16px;
+ }
+  .debit-credit__input{
+   width: 320px;
+   height: 50px;
+   font-size: 15px;
+ }
+ .debit-credit__button{
+  font-size: 18px;
+ }
+ .invoice__list{
+   width:350px;
+   height:364px;
+   padding:7px 5px;
+   border-spacing:20px 21px;
+ }
+ .invoice__icon{
+   width:60px;
+   height:60px;
+   font-size: 25px;
+   padding: 17px;
+   border-radius: 20px;
+ }
+ .invoice__name{
+   margin-bottom: 7px;
+   color: #B1B1B1;
+   font-size: 16px;
+}
+.invoice__time{
+   font-size: 15px;
+}
+.invoice__amount{
+   font-size: 16px;
+}
+}
